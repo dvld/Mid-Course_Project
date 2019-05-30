@@ -23,32 +23,36 @@ public class Game {
 //			System.out.println("current wins: " + player.getWins());
 			message = "You win current wins: " + player_1.getWins();
 			System.out.println(message);
+			menu();
 			return message;
 		} else if (sum == 2 || sum == 3 || sum == 12) {
 			player_1.setLosses(player_1.getLosses() + 1);
 //			System.out.println("current losses: " + player.getLosses());
 			message = "You lose current losses: " + player_1.getLosses();
 			System.out.println(message);
+			menu();
 			return message;
 		} else {
 			int point = sum;
-			System.out.println("Point is " + point);
+			System.out.println("Point to match is " + point);
 			int new_roll = addDice();
 			
 			while (new_roll != point && new_roll != 7) {
 				new_roll = addDice();
+				System.out.println("new roll: " + new_roll);
 			}
-			System.out.println("new roll: " + new_roll);
 			
 			if (new_roll == point) {
 				player_1.setWins(player_1.getWins() + 1);
 				message = "You win current wins: " + player_1.getWins();
 				System.out.println(message);
+				menu();
 				return message;
 			} else {
 				player_1.setLosses(player_1.getLosses() + 1);
 				message = "You lose current losses: " + player_1.getLosses();
 				System.out.println(message);
+				menu();
 				return message;
 			}
 		}
@@ -71,8 +75,8 @@ public class Game {
 	
 	public static void main(String[] args) {
 		
-//		menu();
-		playGame(12);
+		menu();
+//		playGame(12);
 		
 	}
 }

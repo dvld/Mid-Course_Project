@@ -11,6 +11,7 @@ public class PlayerTest {
 
 	private Player testPlayer;
 	
+	// ensures constructor properly creates instances of player object
 	@Test
 	public void constructorTest() {
 		
@@ -26,6 +27,7 @@ public class PlayerTest {
 		
 	}
 	
+	// ensures setters properly affect player object
 	@Test
 	public void settersTest() {
 		
@@ -41,6 +43,7 @@ public class PlayerTest {
 		
 	}
 	
+	// handles constructor exception of passing invalid values
 	@Test
 	public void constructorExceptionTest() {
 		

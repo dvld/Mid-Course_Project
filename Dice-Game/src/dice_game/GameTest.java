@@ -15,13 +15,15 @@ public class GameTest {
 	private Dice testDice;
 	private Player testPlayer;
 	
-//	@Test
-//	public void addDiceTest() {
-//		assertTrue(Game.addDice() > 1);
-//		assertTrue(Game.addDice() <= 12);
-//	}
+	// ensures addDice function calculation is within range of possibilities
+	@Test
+	public void addDiceTest() {
+		assertTrue(Game.addDice() > 1);
+		assertTrue(Game.addDice() <= 12);
+	}
 	
 	
+	// ensures that player object wins and losses increment upon corresponding condition
 	@Test
 	public void playGameTest() {
 //		instantiate test objects

@@ -3,10 +3,14 @@ package dice_game;
 public class Player {
 
 	// properties
+	// ====================
+	
 	private int Wins;
 	private int Losses;
 	
 	// constructor
+	// ====================
+	
 	Player(int wins, int losses) {
 		this.Wins = wins;
 		this.Losses = losses;
@@ -16,6 +20,8 @@ public class Player {
 	}
 	
 	// getters
+	// ====================
+	
 	public int getWins() {
 		return Wins;
 	}
@@ -25,6 +31,8 @@ public class Player {
 	}
 
 	// setters
+	// ====================
+	
 	public Player setWins(int wins) {
 		Wins = wins;
 		return this;

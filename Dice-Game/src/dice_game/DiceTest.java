@@ -14,6 +14,7 @@ public class DiceTest {
 	
 	private Dice testDice;
 	
+	// ensures constructor properly creates instances of dice object
 	@Test
 	public void constructorTest() {
 		
@@ -31,6 +32,7 @@ public class DiceTest {
 		
 	}
 	
+	// handles constructor exception of passing invalid values
 	@Test
 	public void constructorExceptionTest() {
 		
@@ -43,6 +45,7 @@ public class DiceTest {
 		});
 	}
 	
+	// tests that random number is in range of number of sides of dice object
 	@Test
 	public void rollDiceTest() {
 		

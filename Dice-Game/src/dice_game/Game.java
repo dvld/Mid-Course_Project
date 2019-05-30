@@ -8,6 +8,8 @@ public class Game {
 	static Dice dice_1 = new Dice(6);
 	static Dice dice_2 = new Dice(6);
 	
+	// adds dice rolls
+	// ====================
 	public static int addDice() {
 		int sum = dice_1.rollDice() + dice_2.rollDice();
 //		System.out.println("Roll = " + sum);
@@ -17,6 +19,7 @@ public class Game {
 	public static String playGame(int sum) {
 		
 		System.out.println("First roll is " + sum);
+		
 		String message = "";
 		if (sum == 7 || sum == 11) {
 			player_1.setWins(player_1.getWins() + 1);
@@ -24,14 +27,12 @@ public class Game {
 			message = "You win current wins: " + player_1.getWins();
 			System.out.println(message);
 			menu();
-			return message;
 		} else if (sum == 2 || sum == 3 || sum == 12) {
 			player_1.setLosses(player_1.getLosses() + 1);
 //			System.out.println("current losses: " + player.getLosses());
 			message = "You lose current losses: " + player_1.getLosses();
 			System.out.println(message);
 			menu();
-			return message;
 		} else {
 			int point = sum;
 			System.out.println("Point to match is " + point);
@@ -47,15 +48,15 @@ public class Game {
 				message = "You win current wins: " + player_1.getWins();
 				System.out.println(message);
 				menu();
-				return message;
 			} else {
 				player_1.setLosses(player_1.getLosses() + 1);
 				message = "You lose current losses: " + player_1.getLosses();
 				System.out.println(message);
 				menu();
-				return message;
 			}
 		}
+
+		return message;
 	}
 	
 	public static void menu() {

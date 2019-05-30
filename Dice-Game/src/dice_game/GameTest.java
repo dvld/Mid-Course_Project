@@ -29,11 +29,15 @@ public class GameTest {
 //		testDice = new Dice(6);
 		
 		assertEquals("You win current wins: 1", Game.playGame(7));
+		assertEquals(1, Game.player_1.getWins());
 		assertEquals("You win current wins: 2", Game.playGame(11));
+		assertEquals(2, Game.player_1.getWins());
 		assertEquals("You lose current losses: 1", Game.playGame(2));
+		assertEquals(1, Game.player_1.getLosses());
 		assertEquals("You lose current losses: 2", Game.playGame(3));
+		assertEquals(2, Game.player_1.getLosses());
 		assertEquals("You lose current losses: 3", Game.playGame(12));
-		
+		assertEquals(3, Game.player_1.getLosses());
 		
 	}
 	
